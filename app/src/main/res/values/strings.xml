@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Invoice Total</string>
+    <string name="subtotal_label">Subtotal</string>
+</resources>
