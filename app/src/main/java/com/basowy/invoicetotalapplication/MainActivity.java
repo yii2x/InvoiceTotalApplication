@@ -105,12 +105,10 @@ public class MainActivity extends AppCompatActivity implements OnEditorActionLis
 
     @Override
     protected void onPause() {
-
-      //  calculateAndDisplay();
-//
-//        SharedPreferences.Editor editor = savedValues.edit();
-//        editor.putString("subtotalString", subtotalString);
-//        editor.commit();
+        
+        SharedPreferences.Editor editor = savedValues.edit();
+        editor.putString("subtotalString", subtotalString);
+        editor.commit();
 
         super.onPause();
     }
@@ -119,8 +117,8 @@ public class MainActivity extends AppCompatActivity implements OnEditorActionLis
     protected void onResume() {
         super.onResume();
 
-     //   subtotalString = savedValues.getString("subtotalString", "");
-    //    subtotalEditText.setText(subtotalString);
+        subtotalString = savedValues.getString("subtotalString", "");
+        subtotalEditText.setText(subtotalString);
         calculateAndDisplay();
     }
 }
